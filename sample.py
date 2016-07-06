@@ -13,7 +13,7 @@ objp[:,:2] = np.mgrid[0:7,0:6].T.reshape(-1,2)
 objpoints = [] # 3D points in real world space
 imgpoints = [] # 2D points in image plane
 
-images = glob.glob('left[0-9]'+ '*.jpg') # image title
+images = glob.glob('./data/left[0-9]'+ '*.jpg') # image title
 for i,fname in enumerate(images):
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
